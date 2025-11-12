@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rise — прикраси | Особистий бренд</title>
+  <meta name="description" content="Rise — особистий бренд прикрас. Мінімалізм, елегантність та вінтажні нотки." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Перейти на головну">Rise</a>
+      <nav class="nav">
+        <button id="openModal" class="btn btn-outline">Зв'язатися</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1 class="title">Rise</h1>
+        <p class="tagline">Прикраси, що підкреслюють твій стиль — від класики до вінтажу.</p>
+        <p class="cta-row">
+          <a class="btn btn-primary" href="#catalog">Переглянути</a>
+          <a class="btn btn-ghost" href="#about">Про бренд</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="catalog" class="section container">
+      <h2 class="section-title">Обрані вироби</h2>
+      <p class="muted">Секція каталогу мінімальна — щоб зосередити увагу на стилі й формі.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="card-media" aria-hidden="true">
+            <!-- Місце для фото (якщо захочеш додати) -->
+            <svg viewBox="0 0 100 70" class="placeholder-svg" role="img" aria-label="Заглушка зображення">
+              <rect width="100" height="70" rx="6" ry="6" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"></rect>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Скромна каблучка</h3>
+            <p class="price">від 799 ₴</p>
+            <p class="card-desc muted">Мінімалістичний дизайн з вінтажним натяком.</p>
+            <div class="card-actions">
+              <button class="btn btn-outline small">Деталі</button>
+              <button class="btn small">Купити</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media" aria-hidden="true">
+            <svg viewBox="0 0 100 70" class="placeholder-svg" role="img" aria-label="Заглушка зображення">
+              <rect width="100" height="70" rx="6" ry="6" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"></rect>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Класичні сережки</h3>
+            <p class="price">від 1199 ₴</p>
+            <p class="card-desc muted">Легкі, елегантні, для будь-якого віку.</p>
+            <div class="card-actions">
+              <button class="btn btn-outline small">Деталі</button>
+              <button class="btn small">Купити</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media" aria-hidden="true">
+            <svg viewBox="0 0 100 70" class="placeholder-svg" role="img" aria-label="Заглушка зображення">
+              <rect width="100" height="70" rx="6" ry="6" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"></rect>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Підвіска «Відродження»</h3>
+            <p class="price">від 1499 ₴</p>
+            <p class="card-desc muted">Авторський виріб з вінтажною естетикою.</p>
+            <div class="card-actions">
+              <button class="btn btn-outline small">Деталі</button>
+              <button class="btn small">Купити</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2 class="section-title">Про бренд</h2>
+      <p class="muted">Rise — особистий бренд прикрас, що поєднує мінімалізм та вінтажний шарм. Кожен виріб створюється з увагою до деталей та стійкістю до часу.</p>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2 class="section-title">Контакти</h2>
+      <p class="muted">Email: <a href="mailto:hello@rise.example">hello@rise.example</a> — або напиши в Instagram / Telegram.</p>
+      <p>Якщо потрібно — додай тут посилання на свої соціальні мережі.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Rise — усі права збережені.</p>
+    </div>
+  </footer>
+
+  <!-- Модальне вікно (попап) -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" id="backdrop"></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" id="closeModal" aria-label="Закрити">✕</button>
+      <h3 id="modalTitle">Зв'язатися з Rise</h3>
+      <form id="contactForm" class="contact-form" action="#" onsubmit="return false;">
+        <label>Ім'я
+          <input type="text" name="name" placeholder="Твоє ім'я" required>
+        </label>
+        <label>Пошта
+          <input type="email" name="email" placeholder="email@пошта.ua" required>
+        </label>
+        <label>Повідомлення
+          <textarea name="message" rows="4" placeholder="Повідомлення..."></textarea>
+        </label>
+        <div class="form-actions">
+          <button class="btn" type="submit">Надіслати</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
